@@ -10,7 +10,10 @@ export class AdminroleGuard implements CanActivate {
   canActivate(){
       if (localStorage.getItem("usertype") == "Admin")
     return true;
-      else
+    else{
+      alert("You are not authorised")
       return false;
+
+    }
   }
 }
